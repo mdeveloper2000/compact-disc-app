@@ -1,0 +1,24 @@
+<%- include("./partials/header") %>
+
+<div class="container">
+    <form>
+        <fieldset>
+            <legend>Registrar</legend>
+            <label>Nome</label>
+            <input type="text" name="name" placeholder="Nome do disco" maxlength="50">
+            <label>Imagem</label>
+            <button type="button" class="button button-accent">Selecionar imagem</button>
+            <input type="file" name="image" class="file" accept=".png,.jpg,.jpeg">
+            <img id="preview">
+            <label>Descrição</label>
+            <textarea name="description" rows="3" placeholder="Descrição do disco" maxlength="255"></textarea>
+            <button type="submit" class="button button-accent">Salvar Disco</button>
+            <div class="message"></div>
+        </fieldset>
+    </form>
+    <script src="/js/create.js"></script>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<%- include("./partials/header") %>
+
+<div class="container">
+    <div class="disc-show">
+        <span class="left-arrow">&larr;</span>
+        <div class="disc">
+            <img src="/uploads/<%=disc.image%>">
+        </div>        
+        <span class="right-arrow">&rarr;</span>
+    </div>
+    <div class="details">
+        <span class="name">
+            <%= disc.name %>
+        </span>
+        <div class="options">
+            <button class="button button-danger" data-id="<%=disc.id%>">Deletar</button>
+            <a class="button button-primary" href="/edit/<%=disc.id%>">Editar</a>
+        </div>
+        <p class="description">
+            <%= disc.description %>
+        </p>
+        <div>
+            <div class="message"></div>
+        </div>
+    </div>    
+    <script src="/js/show.js"></script>
+    <script src="/js/delete.js"></script>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<%- include("./partials/header") %>
+
+<div class="container">
+    <%- include("./partials/menu") %>
+    <div class="discs">
+        <% if(discs.length > 0 ) { %>
+            <% discs.forEach((disc, index) => { %>
+                <div class="disc" onclick="window.location.href='/show/<%=disc.id%>'">
+                    <img src="/uploads/<%=disc.image%>" class="<%= index % 2 === 0 ? 'right' : 'left' %>" title="<%=disc.name%>">
+                </div>
+            <% }) %>
+        <% } else { %>
+            <div class="message">
+                <span>Não há discos registrados ainda ou a pesquisa não retornou nenhum resultado</span>
+            </div>
+        <% } %>
+    </div>
+</div>
+
+</body>
+
+</html>
